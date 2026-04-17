@@ -11,9 +11,26 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: 'ADHD Guide — Plain-Language Education',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://adhd-guide.vercel.app'),
+  title: {
+    template: '%s | ADHD Guide',
+    default: 'ADHD Guide — Plain-Language Education',
+  },
   description:
     'Understand ADHD across every life stage — from early childhood to later life. Evidence-based guides to symptoms, types, brain chemistry, and what actually helps.',
+  openGraph: {
+    title: 'ADHD Guide — Plain-Language Education',
+    description: 'Understand ADHD across every life stage — from early childhood to later life. Evidence-based guides to symptoms, types, brain chemistry, and what actually helps.',
+    url: '/',
+    siteName: 'ADHD Guide',
+    locale: 'en_GB',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ADHD Guide — Plain-Language Education',
+    description: 'Understand ADHD across every life stage — from early childhood to later life. Evidence-based guides to symptoms, types, brain chemistry, and what actually helps.',
+  },
 }
 
 export default function RootLayout({

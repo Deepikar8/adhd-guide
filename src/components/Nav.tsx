@@ -66,9 +66,20 @@ export default function Nav() {
             {navItems.map((item) => (
               <div
                 key={item.href}
-                className="relative"
+                className="relative group"
                 onMouseEnter={() => item.children && setActiveDropdown(item.href)}
                 onMouseLeave={() => setActiveDropdown(null)}
+                onFocus={() => item.children && setActiveDropdown(item.href)}
+                onBlur={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget)) {
+                    setActiveDropdown(null)
+                  }
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Escape') {
+                    setActiveDropdown(null)
+                  }
+                }}
               >
                 <Link
                   href={item.href}
