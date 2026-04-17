@@ -14,7 +14,7 @@ const categoryOrder = ['diagnostic', 'neuroscience', 'treatment', 'lifespan', 'g
 export default function SourcesPage() {
   return (
     <div>
-      <section className="bg-gradient-to-br from-stone-50 via-stone-100/40 border-b border-stone-200">
+      <section className="bg-gradient-to-br from-stone-50 via-stone-100/40 dark:from-stone-900 dark:via-stone-800/40 border-b border-stone-200 dark:border-stone-800 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <div className="max-w-2xl">
             <div className="text-sm text-stone-500 font-medium mb-3">Sources</div>

@@ -27,7 +27,7 @@ const adultShift = [
 export default function CombinedPage() {
   return (
     <div>
-      <section className="bg-gradient-to-br from-stone-50 via-violet-50/30 to-violet-50/10 border-b border-stone-200">
+      <section className="bg-gradient-to-br from-stone-50 via-violet-50/30 to-violet-50/10 dark:from-stone-900 dark:via-violet-950/20 dark:to-violet-950/10 border-b border-stone-200 dark:border-stone-800 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <div className="text-sm text-violet-700 font-medium mb-3">
             <Link href="/types" className="hover:underline">ADHD Types</Link> / Hyperactive &amp; Combined

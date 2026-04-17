@@ -30,7 +30,7 @@ const categories = ['medication', 'therapy', 'lifestyle', 'tools'] as const
 export default function WhatHelpsPage() {
   return (
     <div>
-      <section className="bg-gradient-to-br from-stone-50 via-emerald-50/30 to-indigo-50/20 border-b border-stone-200">
+      <section className="bg-gradient-to-br from-stone-50 via-emerald-50/30 to-indigo-50/20 dark:from-stone-900 dark:via-emerald-950/20 dark:to-indigo-950/20 border-b border-stone-200 dark:border-stone-800 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <div className="max-w-2xl">
             <div className="text-sm text-emerald-700 font-medium mb-3">What Helps</div>
