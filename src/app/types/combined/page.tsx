@@ -46,49 +46,49 @@ export default function CombinedPage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <h2 className="text-lg font-bold text-stone-900 mb-4">Hyperactivity symptoms</h2>
+            <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100 mb-4">Hyperactivity symptoms</h2>
             <div className="space-y-3">
               {hyperactiveSigns.map((s) => (
-                <div key={s.label} className="bg-white border border-stone-200 rounded-xl p-4 flex gap-3">
+                <div key={s.label} className="bg-white dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 rounded-xl p-4 flex gap-3">
                   <span className="text-violet-400 mt-0.5">◆</span>
                   <div>
-                    <div className="text-sm font-medium text-stone-800">{s.label}</div>
-                    <p className="text-xs text-stone-500 mt-1 leading-relaxed">{s.detail}</p>
+                    <div className="text-sm font-medium text-stone-800 dark:text-stone-200">{s.label}</div>
+                    <p className="text-xs text-stone-500 dark:text-stone-400 mt-1 leading-relaxed">{s.detail}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
           <div>
-            <h2 className="text-lg font-bold text-stone-900 mb-4">Impulsivity symptoms</h2>
+            <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100 mb-4">Impulsivity symptoms</h2>
             <div className="space-y-3">
               {impulsiveSigns.map((s) => (
-                <div key={s.label} className="bg-white border border-stone-200 rounded-xl p-4 flex gap-3">
+                <div key={s.label} className="bg-white dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 rounded-xl p-4 flex gap-3">
                   <span className="text-violet-400 mt-0.5">◆</span>
                   <div>
-                    <div className="text-sm font-medium text-stone-800">{s.label}</div>
-                    <p className="text-xs text-stone-500 mt-1 leading-relaxed">{s.detail}</p>
+                    <div className="text-sm font-medium text-stone-800 dark:text-stone-200">{s.label}</div>
+                    <p className="text-xs text-stone-500 dark:text-stone-400 mt-1 leading-relaxed">{s.detail}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="mt-4 bg-violet-50 border border-violet-200 rounded-xl p-4 text-xs text-stone-600">
-              <strong className="text-violet-800">Combined type</strong> also meets criteria for inattentive symptoms (6+ or 5+ in adults).
+            <div className="mt-4 bg-violet-50 dark:bg-violet-950/20 border border-violet-200 dark:border-violet-800/40 rounded-xl p-4 text-xs text-stone-600 dark:text-stone-400">
+              <strong className="text-violet-800 dark:text-violet-300">Combined type</strong> also meets criteria for inattentive symptoms (6+ or 5+ in adults).
               See the <Link href="/types/inattentive" className="text-violet-700 underline">inattentive page</Link> for those criteria.
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-violet-50 border-y border-violet-100">
+      <section className="bg-violet-50 dark:bg-violet-950/20 border-y border-violet-100 dark:border-violet-800/40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-          <h2 className="text-xl font-bold text-stone-900 mb-2">How combined ADHD changes in adulthood</h2>
-          <p className="text-stone-600 text-sm mb-6">The hyperactivity often reduces in visibility. The impairment does not.</p>
+          <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">How combined ADHD changes in adulthood</h2>
+          <p className="text-stone-600 dark:text-stone-400 text-sm mb-6">The hyperactivity often reduces in visibility. The impairment does not.</p>
           <div className="grid md:grid-cols-3 gap-5">
             {adultShift.map((item) => (
-              <div key={item.heading} className="bg-white rounded-xl p-5 border border-violet-200">
-                <h3 className="font-semibold text-violet-800 mb-2 text-sm">{item.heading}</h3>
-                <p className="text-xs text-stone-700 leading-relaxed">{item.text}</p>
+              <div key={item.heading} className="bg-white dark:bg-stone-800/50 rounded-xl p-5 border border-violet-200 dark:border-violet-800/40">
+                <h3 className="font-semibold text-violet-800 dark:text-violet-300 mb-2 text-sm">{item.heading}</h3>
+                <p className="text-xs text-stone-700 dark:text-stone-300 leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
@@ -100,7 +100,7 @@ export default function CombinedPage() {
           <Link href="/symptoms" className="bg-violet-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-violet-800 transition-colors">
             See all ADHD symptoms →
           </Link>
-          <Link href="/what-helps" className="bg-white border border-stone-300 text-stone-700 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-stone-50 transition-colors">
+          <Link href="/what-helps" className="bg-white dark:bg-stone-800/50 border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
             What helps →
           </Link>
         </div>

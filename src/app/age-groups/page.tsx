@@ -28,18 +28,18 @@ export default function AgeGroupsPage() {
                 <span className="text-4xl">{group.emoji}</span>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 flex-wrap mb-1">
-                    <h2 className="text-xl font-bold text-stone-900">{group.name}</h2>
-                    <span className="text-sm text-stone-500 bg-white/60 px-2.5 py-0.5 rounded-full border border-stone-200">{group.ageRange}</span>
+                    <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100">{group.name}</h2>
+                    <span className="text-sm text-stone-500 dark:text-stone-400 bg-white/60 px-2.5 py-0.5 rounded-full border border-stone-200 dark:border-stone-700">{group.ageRange}</span>
                   </div>
-                  <p className="text-sm text-stone-600 italic">{group.tagline}</p>
+                  <p className="text-sm text-stone-600 dark:text-stone-400 italic">{group.tagline}</p>
                 </div>
               </div>
-              <p className="text-sm text-stone-700 leading-relaxed mb-5">{group.overview}</p>
+              <p className="text-sm text-stone-700 dark:text-stone-300 leading-relaxed mb-5">{group.overview}</p>
               <div className="mb-4">
-                <div className="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-2">What this looks like</div>
+                <div className="text-xs font-semibold text-stone-500 dark:text-stone-400 uppercase tracking-wide mb-2">What this looks like</div>
                 <ul className="space-y-1.5">
                   {group.keyFeatures.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-stone-600">
+                    <li key={f} className="flex items-start gap-2 text-sm text-stone-600 dark:text-stone-400">
                       <span className="text-stone-300 mt-1.5 shrink-0">•</span>
                       <span>{f}</span>
                     </li>
@@ -70,7 +70,7 @@ export default function AgeGroupsPage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-        <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-5 text-sm text-indigo-800">
+        <div className="bg-indigo-50 dark:bg-indigo-950/20 border border-indigo-200 dark:border-indigo-800/40 rounded-xl p-5 text-sm text-indigo-800 dark:text-indigo-300">
           <strong>This site is for education only.</strong> ADHD diagnosis at any age requires a qualified clinician.
           Age-related information here is based on clinical literature and research, not individual assessment.
         </div>

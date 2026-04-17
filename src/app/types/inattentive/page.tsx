@@ -41,30 +41,30 @@ export default function InattentivePage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <h2 className="text-xl font-bold text-stone-900 mb-2">The DSM-5 criteria — in plain language</h2>
-        <p className="text-stone-600 text-sm mb-6">6+ of the following in children (under 17); 5+ in adults. Present for 6+ months, in 2+ settings, causing impairment.</p>
+        <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">The DSM-5 criteria — in plain language</h2>
+        <p className="text-stone-600 dark:text-stone-400 text-sm mb-6">6+ of the following in children (under 17); 5+ in adults. Present for 6+ months, in 2+ settings, causing impairment.</p>
         <div className="space-y-3">
           {signs.map((s) => (
-            <div key={s.label} className="bg-white border border-stone-200 rounded-xl p-4 flex gap-3">
+            <div key={s.label} className="bg-white dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 rounded-xl p-4 flex gap-3">
               <span className="text-indigo-400 mt-0.5">◆</span>
               <div>
-                <div className="text-sm font-medium text-stone-800">{s.label}</div>
-                <p className="text-xs text-stone-500 mt-1 leading-relaxed">{s.detail}</p>
+                <div className="text-sm font-medium text-stone-800 dark:text-stone-200">{s.label}</div>
+                <p className="text-xs text-stone-500 dark:text-stone-400 mt-1 leading-relaxed">{s.detail}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-indigo-50 border-y border-indigo-100">
+      <section className="bg-indigo-50 dark:bg-indigo-950/20 border-y border-indigo-100 dark:border-indigo-800/40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-          <h2 className="text-xl font-bold text-stone-900 mb-2">Who gets missed</h2>
-          <p className="text-stone-600 text-sm mb-6">Inattentive ADHD is the most underdiagnosed presentation. Here is why.</p>
+          <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">Who gets missed</h2>
+          <p className="text-stone-600 dark:text-stone-400 text-sm mb-6">Inattentive ADHD is the most underdiagnosed presentation. Here is why.</p>
           <div className="grid md:grid-cols-3 gap-5">
             {whoMissed.map((item) => (
-              <div key={item.heading} className="bg-white rounded-xl p-5 border border-indigo-200">
-                <h3 className="font-semibold text-indigo-800 mb-2 text-sm">{item.heading}</h3>
-                <p className="text-xs text-stone-700 leading-relaxed">{item.text}</p>
+              <div key={item.heading} className="bg-white dark:bg-stone-800/50 rounded-xl p-5 border border-indigo-200 dark:border-indigo-800/40">
+                <h3 className="font-semibold text-indigo-800 dark:text-indigo-300 mb-2 text-sm">{item.heading}</h3>
+                <p className="text-xs text-stone-700 dark:text-stone-300 leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
@@ -72,7 +72,7 @@ export default function InattentivePage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <div className="bg-white/70 border border-indigo-100 rounded-xl p-5 text-sm text-indigo-900 mb-6">
+        <div className="bg-white/70 dark:bg-stone-800/50 border border-indigo-100 dark:border-indigo-800/40 rounded-xl p-5 text-sm text-indigo-900 dark:text-indigo-200 mb-6">
           <strong>Key fact:</strong> A person with inattentive ADHD can hyperfocus deeply on tasks they find interesting. This is often used to argue they &ldquo;can&apos;t really have ADHD.&rdquo;
           It is actually consistent with the diagnosis — attention dysregulation goes both ways.
         </div>
@@ -80,7 +80,7 @@ export default function InattentivePage() {
           <Link href="/symptoms" className="bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-indigo-800 transition-colors">
             See all ADHD symptoms →
           </Link>
-          <Link href="/what-helps" className="bg-white border border-stone-300 text-stone-700 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-stone-50 transition-colors">
+          <Link href="/what-helps" className="bg-white dark:bg-stone-800/50 border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
             What helps →
           </Link>
         </div>

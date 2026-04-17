@@ -7,16 +7,16 @@ const regions = [
     emoji: '🧩',
     role: 'Executive function hub',
     adhdImpact: 'Dysregulated dopamine and norepinephrine signalling — involving altered reuptake and release patterns — impairs planning, working memory, impulse control, and task initiation. This is where the most consistent structural and functional differences are found in ADHD.',
-    color: 'bg-indigo-50 border-indigo-200',
-    textColor: 'text-indigo-800',
+    color: 'bg-indigo-50 dark:bg-indigo-950/20 border-indigo-200 dark:border-indigo-800/40',
+    textColor: 'text-indigo-800 dark:text-indigo-300',
   },
   {
     name: 'Striatum & Basal Ganglia',
     emoji: '🔄',
     role: 'Reward processing & habit formation',
     adhdImpact: 'Dopamine signalling differences in the striatum alter how the ADHD brain responds to reward. Low-reward tasks generate insufficient dopamine to sustain motivation — high-reward tasks generate more than enough. This is the biological basis of hyperfocus and task-avoidance existing in the same person.',
-    color: 'bg-violet-50 border-violet-200',
-    textColor: 'text-violet-800',
+    color: 'bg-violet-50 dark:bg-violet-950/20 border-violet-200 dark:border-violet-800/40',
+    textColor: 'text-violet-800 dark:text-violet-300',
   },
   {
     name: 'Cerebellum',
@@ -72,26 +72,26 @@ export default function BrainPage() {
 
       {/* Neurotransmitters */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <h2 className="text-xl font-bold text-stone-900 mb-2">Key neurotransmitters</h2>
-        <p className="text-stone-600 text-sm mb-6">ADHD primarily involves dysregulation — not deficiency — of these signalling systems.</p>
+        <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">Key neurotransmitters</h2>
+        <p className="text-stone-600 dark:text-stone-400 text-sm mb-6">ADHD primarily involves dysregulation — not deficiency — of these signalling systems.</p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {brainChemicals.map((c) => (
-            <div key={c.name} className="bg-white border border-stone-200 rounded-xl p-5 hover:shadow-sm transition-all">
+            <div key={c.name} className="bg-white dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 rounded-xl p-5 hover:shadow-sm transition-all">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">{c.emoji}</span>
-                <span className="font-semibold text-stone-900 text-sm">{c.name}</span>
+                <span className="font-semibold text-stone-900 dark:text-stone-100 text-sm">{c.name}</span>
               </div>
-              <p className="text-xs text-stone-500 leading-relaxed">{c.note}</p>
+              <p className="text-xs text-stone-500 dark:text-stone-400 leading-relaxed">{c.note}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Brain regions */}
-      <section className="bg-stone-50 border-y border-stone-200">
+      <section className="bg-stone-50 dark:bg-stone-900/50 border-y border-stone-200 dark:border-stone-700">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-          <h2 className="text-xl font-bold text-stone-900 mb-2">Brain regions involved in ADHD</h2>
-          <p className="text-stone-600 text-sm mb-6">Structural and functional neuroimaging studies consistently implicate these regions.</p>
+          <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">Brain regions involved in ADHD</h2>
+          <p className="text-stone-600 dark:text-stone-400 text-sm mb-6">Structural and functional neuroimaging studies consistently implicate these regions.</p>
           <div className="space-y-4">
             {regions.map((r) => (
               <div key={r.name} className={`border rounded-2xl p-5 ${r.color}`}>
@@ -100,9 +100,9 @@ export default function BrainPage() {
                   <div>
                     <div className="flex items-center gap-3 mb-1 flex-wrap">
                       <h3 className={`font-bold text-sm ${r.textColor}`}>{r.name}</h3>
-                      <span className="text-xs text-stone-500 bg-white/70 px-2 py-0.5 rounded-full border border-stone-200">{r.role}</span>
+                      <span className="text-xs text-stone-500 dark:text-stone-400 bg-white/70 dark:bg-stone-800/50 px-2 py-0.5 rounded-full border border-stone-200 dark:border-stone-700">{r.role}</span>
                     </div>
-                    <p className="text-xs text-stone-700 leading-relaxed">{r.adhdImpact}</p>
+                    <p className="text-xs text-stone-700 dark:text-stone-300 leading-relaxed">{r.adhdImpact}</p>
                   </div>
                 </div>
               </div>
@@ -113,17 +113,17 @@ export default function BrainPage() {
 
       {/* Myths */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <h2 className="text-xl font-bold text-stone-900 mb-6">Common myths — corrected</h2>
+        <h2 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-6">Common myths — corrected</h2>
         <div className="grid md:grid-cols-2 gap-4">
           {myths.map((m) => (
-            <div key={m.myth} className="bg-white border border-stone-200 rounded-xl p-5">
+            <div key={m.myth} className="bg-white dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 rounded-xl p-5">
               <div className="flex items-start gap-2 mb-3">
                 <span className="text-red-400 text-sm font-bold mt-0.5">✕</span>
-                <p className="text-sm font-medium text-stone-700">{m.myth}</p>
+                <p className="text-sm font-medium text-stone-700 dark:text-stone-300">{m.myth}</p>
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-emerald-500 text-sm font-bold mt-0.5">✓</span>
-                <p className="text-xs text-stone-700 leading-relaxed">{m.fact}</p>
+                <p className="text-xs text-stone-700 dark:text-stone-300 leading-relaxed">{m.fact}</p>
               </div>
             </div>
           ))}
@@ -135,7 +135,7 @@ export default function BrainPage() {
           <Link href="/symptoms" className="bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-indigo-800 transition-colors">
             See all ADHD symptoms →
           </Link>
-          <Link href="/sources" className="bg-white border border-stone-300 text-stone-700 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-stone-50 transition-colors">
+          <Link href="/sources" className="bg-white dark:bg-stone-800/50 border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-700 transition-colors">
             Sources &amp; citations →
           </Link>
         </div>
