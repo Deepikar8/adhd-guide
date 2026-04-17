@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
 
 interface NavItem {
   href: string
@@ -46,17 +47,23 @@ export default function Nav() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const isActive = (href: string) =>
     href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(href + '/')
 
   return (
-    <nav className="bg-white border-b border-stone-200 sticky top-0 z-50">
+    <nav className="bg-white dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800 sticky top-0 z-50 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <span className="text-2xl">🧩</span>
-            <span className="font-semibold text-stone-800 text-lg tracking-tight">
+            <span className="font-semibold text-stone-800 dark:text-stone-100 text-lg tracking-tight">
               ADHD Guide
             </span>
           </Link>
@@ -85,8 +92,8 @@ export default function Nav() {
                   href={item.href}
                   className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'bg-indigo-100 text-indigo-900'
-                      : 'text-stone-600 hover:text-stone-900 hover:bg-stone-100'
+                      ? 'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-900 dark:text-indigo-300'
+                      : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800'
                   }`}
                 >
                   {item.label}
@@ -99,16 +106,16 @@ export default function Nav() {
 
                 {/* Dropdown */}
                 {item.children && activeDropdown === item.href && (
-                  <div className="absolute top-full left-0 mt-0.5 w-56 bg-white border border-stone-200 rounded-xl shadow-lg py-1.5 z-50">
+                  <div className="absolute top-full left-0 mt-0.5 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg py-1.5 z-50">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className={`block px-4 py-2.5 hover:bg-stone-50 transition-colors ${
-                          pathname === child.href ? 'bg-indigo-50' : ''
+                        className={`block px-4 py-2.5 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors ${
+                          pathname === child.href ? 'bg-indigo-50 dark:bg-indigo-900/20' : ''
                         }`}
                       >
-                        <div className={`text-sm font-medium ${pathname === child.href ? 'text-indigo-800' : 'text-stone-800'}`}>
+                        <div className={`text-sm font-medium ${pathname === child.href ? 'text-indigo-800 dark:text-indigo-300' : 'text-stone-800 dark:text-stone-200'}`}>
                           {child.label}
                         </div>
                         {child.description && (
@@ -122,27 +129,40 @@ export default function Nav() {
             ))}
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden p-2 rounded-lg text-stone-600 hover:bg-stone-100"
-            aria-label="Toggle menu"
-          >
-            {open ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+          {/* Controls */}
+          <div className="flex items-center gap-2">
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="p-2 rounded-lg text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
+                aria-label="Toggle Dark Mode"
+              >
+                {theme === 'dark' ? '☀️' : '🌙'}
+              </button>
             )}
-          </button>
+
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setOpen(!open)}
+              className="md:hidden p-2 rounded-lg text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800"
+              aria-label="Toggle menu"
+            >
+              {open ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu */}
         {open && (
-          <div className="md:hidden pb-4 space-y-1 border-t border-stone-100 pt-3">
+          <div className="md:hidden pb-4 space-y-1 border-t border-stone-100 dark:border-stone-800 pt-3">
             {navItems.map((item) => (
               <div key={item.href}>
                 <Link
@@ -150,8 +170,8 @@ export default function Nav() {
                   onClick={() => setOpen(false)}
                   className={`block px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'bg-indigo-100 text-indigo-900'
-                      : 'text-stone-600 hover:text-stone-900 hover:bg-stone-100'
+                      ? 'bg-indigo-100 dark:bg-indigo-900/40 text-indigo-900 dark:text-indigo-300'
+                      : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800'
                   }`}
                 >
                   {item.label}
@@ -163,7 +183,7 @@ export default function Nav() {
                         key={child.href}
                         href={child.href}
                         onClick={() => setOpen(false)}
-                        className="block px-3 py-1.5 rounded-lg text-xs text-stone-500 hover:text-stone-800 hover:bg-stone-50 transition-colors"
+                        className="block px-3 py-1.5 rounded-lg text-xs text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors"
                       >
                         {child.label}
                       </Link>
