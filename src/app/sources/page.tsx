@@ -17,11 +17,11 @@ export default function SourcesPage() {
       <section className="bg-gradient-to-br from-stone-50 via-stone-100/40 dark:from-stone-900 dark:via-stone-800/40 border-b border-stone-200 dark:border-stone-800 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <div className="max-w-2xl">
-            <div className="text-sm text-stone-500 font-medium mb-3">Sources</div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
+            <div className="text-sm text-stone-500 dark:text-stone-400 font-medium mb-3">Sources</div>
+            <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mb-4">
               Sources &amp; citations
             </h1>
-            <p className="text-lg text-stone-700 leading-relaxed">
+            <p className="text-lg text-stone-700 dark:text-stone-300 leading-relaxed">
               This site is based on peer-reviewed research, clinical guidelines, and expert consensus.
               All major claims are traceable to the sources below.
             </p>

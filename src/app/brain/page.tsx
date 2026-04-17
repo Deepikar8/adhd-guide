@@ -57,11 +57,11 @@ export default function BrainPage() {
       <section className="bg-gradient-to-br from-stone-50 via-indigo-50/30 to-blue-50/20 dark:from-stone-900 dark:via-indigo-950/20 dark:to-blue-950/20 border-b border-stone-200 dark:border-stone-800 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <div className="max-w-2xl">
-            <div className="text-sm text-indigo-700 font-medium mb-3">Brain &amp; Chemistry</div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
+            <div className="text-sm text-indigo-700 dark:text-indigo-400 font-medium mb-3">Brain &amp; Chemistry</div>
+            <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mb-4">
               How the ADHD brain works
             </h1>
-            <p className="text-lg text-stone-700 leading-relaxed">
+            <p className="text-lg text-stone-700 dark:text-stone-300 leading-relaxed">
               ADHD involves measurable differences in brain structure, function, and neurochemistry.
               Understanding these differences is not about excuses — it is about accuracy. You cannot
               manage something you do not understand.

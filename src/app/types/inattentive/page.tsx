@@ -26,15 +26,15 @@ export default function InattentivePage() {
     <div>
       <section className="bg-gradient-to-br from-stone-50 via-indigo-50/30 to-indigo-50/10 dark:from-stone-900 dark:via-indigo-950/20 dark:to-indigo-950/10 border-b border-stone-200 dark:border-stone-800 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-          <div className="text-sm text-indigo-700 font-medium mb-3">
+          <div className="text-sm text-indigo-700 dark:text-indigo-400 font-medium mb-3">
             <Link href="/types" className="hover:underline">ADHD Types</Link> / Inattentive
           </div>
           <div className="flex items-start gap-4 max-w-2xl">
             <span className="text-5xl mt-1">{type.emoji}</span>
             <div>
-              <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-3">{type.name}</h1>
-              <p className="text-lg text-indigo-700 font-medium mb-3">{type.headline}</p>
-              <p className="text-stone-600 leading-relaxed">{type.description}</p>
+              <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mb-3">{type.name}</h1>
+              <p className="text-lg text-indigo-700 dark:text-indigo-400 font-medium mb-3">{type.headline}</p>
+              <p className="text-stone-600 dark:text-stone-300 leading-relaxed">{type.description}</p>
             </div>
           </div>
         </div>

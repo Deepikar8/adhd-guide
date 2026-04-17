@@ -7,11 +7,11 @@ export default function TypesPage() {
       <section className="bg-gradient-to-br from-stone-50 via-indigo-50/30 to-violet-50/20 dark:from-stone-900 dark:via-indigo-950/20 dark:to-violet-950/20 border-b border-stone-200 dark:border-stone-800 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <div className="max-w-2xl">
-            <div className="text-sm text-indigo-700 font-medium mb-3">ADHD Types</div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
+            <div className="text-sm text-indigo-700 dark:text-indigo-400 font-medium mb-3">ADHD Types</div>
+            <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mb-4">
               The presentations of ADHD
             </h1>
-            <p className="text-lg text-stone-700 leading-relaxed">
+            <p className="text-lg text-stone-700 dark:text-stone-300 leading-relaxed">
               ADHD is classified into three presentations. Two of them — inattentive, and
               hyperactive/combined — account for the vast majority of diagnoses. Both share the same
               neurological foundation but look very different on the surface.

@@ -7,11 +7,11 @@ export default function AgeGroupsPage() {
       <section className="bg-gradient-to-br from-stone-50 via-emerald-50/30 to-green-50/20 dark:from-stone-900 dark:via-emerald-950/20 dark:to-green-950/20 border-b border-stone-200 dark:border-stone-800 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <div className="max-w-2xl">
-            <div className="text-sm text-emerald-700 font-medium mb-3">Age Groups</div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
+            <div className="text-sm text-emerald-700 dark:text-emerald-400 font-medium mb-3">Age Groups</div>
+            <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mb-4">
               ADHD across a lifetime
             </h1>
-            <p className="text-lg text-stone-700 leading-relaxed">
+            <p className="text-lg text-stone-700 dark:text-stone-300 leading-relaxed">
               The neurology of ADHD does not change — but the demands placed on it do. Each life stage brings
               different expectations, different contexts, and different ways the same underlying differences
               manifest and impair.
