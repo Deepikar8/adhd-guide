@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ADHD Guide
 
-## Getting Started
+Evidence-based, plain-language education about ADHD — across every life stage, for everyone who lives with it, loves someone who does, or is just finding out.
 
-First, run the development server:
+Built as a companion to [Hormonal Health](https://hormonal-health.vercel.app), using the same architecture and design system.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack
+
+- **Next.js 16** (App Router, fully static)
+- **Tailwind CSS 4**
+- **TypeScript**
+- **Vercel Analytics**
+
+## Pages
+
+| Route | Content |
+|---|---|
+| `/` | Home — hero, presentations, age group strip, brain chemistry, quick links |
+| `/types` | Overview of both ADHD presentations |
+| `/types/inattentive` | Inattentive ADHD deep-dive — DSM criteria, who gets missed |
+| `/types/combined` | Hyperactive / Combined — criteria, how symptoms shift in adulthood |
+| `/age-groups` | ADHD across a lifetime — early childhood through later life |
+| `/symptoms` | 8 symptom clusters in plain language (executive dysfunction, attention, emotional dysregulation, RSD, working memory, time blindness, hyperfocus, sleep) |
+| `/brain` | Neurotransmitters, brain regions, common myths corrected |
+| `/what-helps` | Evidence-rated interventions — medication, therapy, lifestyle, tools |
+| `/sources` | 14 peer-reviewed citations organised by category |
+
+## Project Structure
+
+```
+src/
+├── app/               # Next.js App Router pages
+│   ├── page.tsx       # Home
+│   ├── types/         # ADHD types + sub-pages
+│   ├── age-groups/
+│   ├── symptoms/
+│   ├── brain/
+│   ├── what-helps/
+│   └── sources/
+├── components/
+│   ├── Nav.tsx
+│   └── Footer.tsx
+└── data/              # All content as typed TypeScript data files
+    ├── adhd-types.ts
+    ├── age-groups.ts
+    ├── brain-chemicals.ts
+    ├── symptoms.ts
+    ├── interventions.ts
+    └── sources.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Content Standards
 
-To learn more about Next.js, take a look at the following resources:
+All factual claims are based on peer-reviewed research, DSM-5-TR diagnostic criteria, and NICE guidelines. The site is educational only — not medical advice. Sources are listed at `/sources`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deploy to Vercel with one click:
 
-## Deploy on Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by [Deepika Rudra Murthy](https://www.linkedin.com/in/deepika-rudra-murthy/)
