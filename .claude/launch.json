@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "adhd-site",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3001,
+      "autoPort": true,
+      "cwd": "/Users/deepikamurthy/ADHD/adhd-site"
+    }
+  ]
+}

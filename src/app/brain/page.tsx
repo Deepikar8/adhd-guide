@@ -73,7 +73,7 @@ export default function BrainPage() {
       {/* Neurotransmitters */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <h2 className="text-xl font-bold text-stone-900 mb-2">Key neurotransmitters</h2>
-        <p className="text-stone-500 text-sm mb-6">ADHD primarily involves dysregulation — not deficiency — of these signalling systems.</p>
+        <p className="text-stone-600 text-sm mb-6">ADHD primarily involves dysregulation — not deficiency — of these signalling systems.</p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {brainChemicals.map((c) => (
             <div key={c.name} className="bg-white border border-stone-200 rounded-xl p-5 hover:shadow-sm transition-all">
@@ -91,7 +91,7 @@ export default function BrainPage() {
       <section className="bg-stone-50 border-y border-stone-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
           <h2 className="text-xl font-bold text-stone-900 mb-2">Brain regions involved in ADHD</h2>
-          <p className="text-stone-500 text-sm mb-6">Structural and functional neuroimaging studies consistently implicate these regions.</p>
+          <p className="text-stone-600 text-sm mb-6">Structural and functional neuroimaging studies consistently implicate these regions.</p>
           <div className="space-y-4">
             {regions.map((r) => (
               <div key={r.name} className={`border rounded-2xl p-5 ${r.color}`}>
@@ -102,7 +102,7 @@ export default function BrainPage() {
                       <h3 className={`font-bold text-sm ${r.textColor}`}>{r.name}</h3>
                       <span className="text-xs text-stone-500 bg-white/70 px-2 py-0.5 rounded-full border border-stone-200">{r.role}</span>
                     </div>
-                    <p className="text-xs text-stone-600 leading-relaxed">{r.adhdImpact}</p>
+                    <p className="text-xs text-stone-700 leading-relaxed">{r.adhdImpact}</p>
                   </div>
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function BrainPage() {
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-emerald-500 text-sm font-bold mt-0.5">✓</span>
-                <p className="text-xs text-stone-600 leading-relaxed">{m.fact}</p>
+                <p className="text-xs text-stone-700 leading-relaxed">{m.fact}</p>
               </div>
             </div>
           ))}

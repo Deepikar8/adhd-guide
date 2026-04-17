@@ -42,7 +42,7 @@ export default function InattentivePage() {
 
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <h2 className="text-xl font-bold text-stone-900 mb-2">The DSM-5 criteria — in plain language</h2>
-        <p className="text-stone-500 text-sm mb-6">6+ of the following in children (under 17); 5+ in adults. Present for 6+ months, in 2+ settings, causing impairment.</p>
+        <p className="text-stone-600 text-sm mb-6">6+ of the following in children (under 17); 5+ in adults. Present for 6+ months, in 2+ settings, causing impairment.</p>
         <div className="space-y-3">
           {signs.map((s) => (
             <div key={s.label} className="bg-white border border-stone-200 rounded-xl p-4 flex gap-3">
@@ -59,12 +59,12 @@ export default function InattentivePage() {
       <section className="bg-indigo-50 border-y border-indigo-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
           <h2 className="text-xl font-bold text-stone-900 mb-2">Who gets missed</h2>
-          <p className="text-stone-500 text-sm mb-6">Inattentive ADHD is the most underdiagnosed presentation. Here is why.</p>
+          <p className="text-stone-600 text-sm mb-6">Inattentive ADHD is the most underdiagnosed presentation. Here is why.</p>
           <div className="grid md:grid-cols-3 gap-5">
             {whoMissed.map((item) => (
               <div key={item.heading} className="bg-white rounded-xl p-5 border border-indigo-200">
                 <h3 className="font-semibold text-indigo-800 mb-2 text-sm">{item.heading}</h3>
-                <p className="text-xs text-stone-600 leading-relaxed">{item.text}</p>
+                <p className="text-xs text-stone-700 leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>

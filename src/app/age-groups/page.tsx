@@ -31,10 +31,10 @@ export default function AgeGroupsPage() {
                     <h2 className="text-xl font-bold text-stone-900">{group.name}</h2>
                     <span className="text-sm text-stone-500 bg-white/60 px-2.5 py-0.5 rounded-full border border-stone-200">{group.ageRange}</span>
                   </div>
-                  <p className="text-sm text-stone-500 italic">{group.tagline}</p>
+                  <p className="text-sm text-stone-600 italic">{group.tagline}</p>
                 </div>
               </div>
-              <p className="text-sm text-stone-600 leading-relaxed mb-5">{group.overview}</p>
+              <p className="text-sm text-stone-700 leading-relaxed mb-5">{group.overview}</p>
               <div className="mb-4">
                 <div className="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-2">What this looks like</div>
                 <ul className="space-y-1.5">

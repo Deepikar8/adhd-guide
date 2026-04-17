@@ -83,12 +83,12 @@ export default function CombinedPage() {
       <section className="bg-violet-50 border-y border-violet-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
           <h2 className="text-xl font-bold text-stone-900 mb-2">How combined ADHD changes in adulthood</h2>
-          <p className="text-stone-500 text-sm mb-6">The hyperactivity often reduces in visibility. The impairment does not.</p>
+          <p className="text-stone-600 text-sm mb-6">The hyperactivity often reduces in visibility. The impairment does not.</p>
           <div className="grid md:grid-cols-3 gap-5">
             {adultShift.map((item) => (
               <div key={item.heading} className="bg-white rounded-xl p-5 border border-violet-200">
                 <h3 className="font-semibold text-violet-800 mb-2 text-sm">{item.heading}</h3>
-                <p className="text-xs text-stone-600 leading-relaxed">{item.text}</p>
+                <p className="text-xs text-stone-700 leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>

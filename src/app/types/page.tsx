@@ -32,7 +32,7 @@ export default function TypesPage() {
                 </div>
               </div>
 
-              <p className="text-sm text-stone-600 leading-relaxed mb-6">{type.description}</p>
+              <p className="text-sm text-stone-700 leading-relaxed mb-6">{type.description}</p>
 
               <div className="mb-6">
                 <div className="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-2">Presents across</div>
@@ -49,7 +49,7 @@ export default function TypesPage() {
 
               <div className="bg-white/70 rounded-xl p-4 mb-6 border border-stone-200">
                 <div className={`text-xs font-semibold mb-1 ${type.id === 'inattentive' ? 'text-indigo-700' : 'text-violet-700'}`}>{type.highlight.label}</div>
-                <p className="text-xs text-stone-600 leading-relaxed">{type.highlight.text}</p>
+                <p className="text-xs text-stone-700 leading-relaxed">{type.highlight.text}</p>
               </div>
 
               <Link

@@ -4,7 +4,7 @@ import Link from 'next/link'
 const evidenceLabels: Record<EvidenceTier, { label: string; color: string }> = {
   strong:   { label: 'Strong evidence', color: 'bg-emerald-100 text-emerald-800' },
   moderate: { label: 'Moderate evidence', color: 'bg-amber-100 text-amber-800' },
-  limited:  { label: 'Limited evidence', color: 'bg-stone-100 text-stone-600' },
+  limited:  { label: 'Limited evidence', color: 'bg-stone-200 text-stone-700' },
 }
 
 const categoryLabels: Record<string, { label: string; emoji: string }> = {
@@ -76,26 +76,26 @@ export default function WhatHelpsPage() {
                           <h3 className={`font-bold text-base ${c.text}`}>{item.name}</h3>
                           <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${ev.color}`}>{ev.label}</span>
                         </div>
-                        <p className="text-sm text-stone-500 italic">{item.tagline}</p>
+                        <p className="text-sm text-stone-600 italic">{item.tagline}</p>
                       </div>
                     </div>
                     <div className="bg-white px-6 py-5">
-                      <p className="text-sm text-stone-600 leading-relaxed mb-5">{item.description}</p>
+                      <p className="text-sm text-stone-700 leading-relaxed mb-5">{item.description}</p>
                       <div className="grid sm:grid-cols-2 gap-5">
                         <div>
-                          <div className="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-2">Best for</div>
+                          <div className="text-xs font-semibold text-stone-600 uppercase tracking-wide mb-2">Best for</div>
                           <ul className="space-y-1">
                             {item.bestFor.map((b) => (
-                              <li key={b} className="flex items-start gap-2 text-xs text-stone-600">
-                                <span className="text-stone-300 mt-1 shrink-0">•</span>
+                              <li key={b} className="flex items-start gap-2 text-xs text-stone-700">
+                                <span className="text-stone-400 mt-1 shrink-0">•</span>
                                 <span>{b}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
                         <div>
-                          <div className="text-xs font-semibold text-stone-500 uppercase tracking-wide mb-2">Notes</div>
-                          <p className="text-xs text-stone-600 leading-relaxed">{item.notes}</p>
+                          <div className="text-xs font-semibold text-stone-600 uppercase tracking-wide mb-2">Notes</div>
+                          <p className="text-xs text-stone-700 leading-relaxed">{item.notes}</p>
                         </div>
                       </div>
                     </div>
