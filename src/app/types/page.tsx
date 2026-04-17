@@ -11,7 +11,7 @@ export default function TypesPage() {
             <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
               The presentations of ADHD
             </h1>
-            <p className="text-lg text-stone-600 leading-relaxed">
+            <p className="text-lg text-stone-700 leading-relaxed">
               ADHD is classified into three presentations. Two of them — inattentive, and
               hyperactive/combined — account for the vast majority of diagnoses. Both share the same
               neurological foundation but look very different on the surface.

@@ -11,7 +11,7 @@ export default function AgeGroupsPage() {
             <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
               ADHD across a lifetime
             </h1>
-            <p className="text-lg text-stone-600 leading-relaxed">
+            <p className="text-lg text-stone-700 leading-relaxed">
               The neurology of ADHD does not change — but the demands placed on it do. Each life stage brings
               different expectations, different contexts, and different ways the same underlying differences
               manifest and impair.

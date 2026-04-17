@@ -24,7 +24,7 @@ export default function SymptomsPage() {
               <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 dark:text-stone-100 mb-4">
                 What ADHD actually feels like
               </h1>
-              <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
+              <p className="text-lg text-stone-700 dark:text-stone-300 leading-relaxed">
                 ADHD is not just &ldquo;can&apos;t sit still&rdquo; or &ldquo;gets distracted easily.&rdquo; It is a cluster of
                 interconnected symptoms — many of which are invisible, poorly understood, and routinely
                 misattributed to personality flaws.

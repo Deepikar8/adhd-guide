@@ -21,7 +21,7 @@ export default function SourcesPage() {
             <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
               Sources &amp; citations
             </h1>
-            <p className="text-lg text-stone-600 leading-relaxed">
+            <p className="text-lg text-stone-700 leading-relaxed">
               This site is based on peer-reviewed research, clinical guidelines, and expert consensus.
               All major claims are traceable to the sources below.
             </p>

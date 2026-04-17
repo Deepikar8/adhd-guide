@@ -37,7 +37,7 @@ export default function WhatHelpsPage() {
             <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
               Evidence-based interventions for ADHD
             </h1>
-            <p className="text-lg text-stone-600 leading-relaxed">
+            <p className="text-lg text-stone-700 leading-relaxed">
               What actually works for ADHD — with evidence ratings, what each intervention does,
               and who it is best suited for. Medication, therapy, lifestyle, and practical tools.
             </p>

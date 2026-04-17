@@ -34,7 +34,7 @@ export default function HomePage() {
         <section className="bg-gradient-to-br from-stone-50 via-indigo-50/30 to-violet-50/30 dark:from-stone-900 dark:via-indigo-950/20 dark:to-violet-950/20 border-b border-stone-200 dark:border-stone-800">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 bg-white dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 rounded-full px-4 py-1.5 text-sm text-stone-600 dark:text-stone-300 mb-6">
+              <div className="inline-flex items-center gap-2 bg-white dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700 rounded-full px-4 py-1.5 text-sm text-stone-700 dark:text-stone-300 mb-6">
                 <span>🧩</span>
                 <span>Evidence-based · All ages · Plain language · No judgment</span>
               </div>
@@ -42,7 +42,7 @@ export default function HomePage() {
                 What is actually happening<br />
                 <span className="text-indigo-700 dark:text-indigo-400">in the ADHD brain?</span>
               </h1>
-              <p className="text-lg sm:text-xl text-stone-600 dark:text-stone-400 leading-relaxed mb-8 max-w-2xl">
+              <p className="text-lg sm:text-xl text-stone-700 dark:text-stone-300 leading-relaxed mb-8 max-w-2xl">
                 ADHD is not a attention problem — it is a regulation problem. Dopamine, norepinephrine,
                 executive function, working memory, time perception, emotional regulation. This guide
                 explains what is actually happening, at every age, in plain language.

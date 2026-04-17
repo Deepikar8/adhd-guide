@@ -61,7 +61,7 @@ export default function BrainPage() {
             <h1 className="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">
               How the ADHD brain works
             </h1>
-            <p className="text-lg text-stone-600 leading-relaxed">
+            <p className="text-lg text-stone-700 leading-relaxed">
               ADHD involves measurable differences in brain structure, function, and neurochemistry.
               Understanding these differences is not about excuses — it is about accuracy. You cannot
               manage something you do not understand.
