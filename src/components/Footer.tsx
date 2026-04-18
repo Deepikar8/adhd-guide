@@ -21,7 +21,8 @@ export default function Footer() {
             <ul className="space-y-2 text-stone-500 dark:text-stone-400">
               <li><Link href="/types" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">Types overview</Link></li>
               <li><Link href="/types/inattentive" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">Inattentive (ADHD-PI)</Link></li>
-              <li><Link href="/types/combined" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">Hyperactive / Combined</Link></li>
+              <li><Link href="/types/combined" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">Combined (ADHD-C)</Link></li>
+              <li><Link href="/types/hyperactive" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">Hyperactive (ADHD-PH)</Link></li>
               <li><Link href="/age-groups" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">Age groups</Link></li>
             </ul>
           </div>
@@ -31,6 +32,8 @@ export default function Footer() {
             <ul className="space-y-2 text-stone-500 dark:text-stone-400">
               <li><Link href="/symptoms" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">All symptoms</Link></li>
               <li><Link href="/brain" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">Brain & chemistry</Link></li>
+              <li><Link href="/comorbidities" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">Comorbidities</Link></li>
+              <li><Link href="/diagnosis" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">Diagnostic journey</Link></li>
               <li><Link href="/what-helps" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">What helps</Link></li>
               <li><Link href="/sources" className="hover:text-stone-800 dark:hover:text-stone-200 transition-colors">Sources</Link></li>
             </ul>

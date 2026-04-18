@@ -21,13 +21,36 @@ export default function TypesPage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <div className="grid md:grid-cols-2 gap-8">
-          {adhdTypes.map((type) => (
-            <div key={type.id} className={`border rounded-2xl p-7 ${type.id === 'inattentive' ? 'bg-indigo-50 dark:bg-indigo-950/20 border-indigo-200 dark:border-indigo-800/40' : 'bg-violet-50 dark:bg-violet-950/20 border-violet-200 dark:border-violet-800/40'}`}>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+          {adhdTypes.map((type) => {
+            const colors: Record<string, any> = {
+              inattentive: {
+                bg: 'bg-indigo-50 dark:bg-indigo-950/20 border-indigo-200 dark:border-indigo-800/40',
+                text: 'text-indigo-800 dark:text-indigo-300',
+                highlightText: 'text-indigo-700 dark:text-indigo-400',
+                btn: 'bg-indigo-700 hover:bg-indigo-800 dark:bg-indigo-600 dark:hover:bg-indigo-500'
+              },
+              combined: {
+                bg: 'bg-violet-50 dark:bg-violet-950/20 border-violet-200 dark:border-violet-800/40',
+                text: 'text-violet-800 dark:text-violet-300',
+                highlightText: 'text-violet-700 dark:text-violet-400',
+                btn: 'bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-500'
+              },
+              hyperactive: {
+                bg: 'bg-rose-50 dark:bg-rose-950/20 border-rose-200 dark:border-rose-800/40',
+                text: 'text-rose-800 dark:text-rose-300',
+                highlightText: 'text-rose-700 dark:text-rose-400',
+                btn: 'bg-rose-700 hover:bg-rose-800 dark:bg-rose-600 dark:hover:bg-rose-500'
+              }
+            };
+            const c = colors[type.id] || colors.inattentive;
+            
+            return (
+            <div key={type.id} className={`border rounded-2xl p-7 ${c.bg}`}>
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-4xl">{type.emoji}</span>
                 <div>
-                  <h2 className={`text-xl font-bold ${type.id === 'inattentive' ? 'text-indigo-800 dark:text-indigo-300' : 'text-violet-800 dark:text-violet-300'}`}>{type.name}</h2>
+                  <h2 className={`text-xl font-bold ${c.text}`}>{type.name}</h2>
                   <p className="text-sm text-stone-500 dark:text-stone-400 mt-0.5">{type.headline}</p>
                 </div>
               </div>
@@ -48,18 +71,18 @@ export default function TypesPage() {
               </div>
 
               <div className="bg-white/70 dark:bg-stone-800/50 rounded-xl p-4 mb-6 border border-stone-200 dark:border-stone-700">
-                <div className={`text-xs font-semibold mb-1 ${type.id === 'inattentive' ? 'text-indigo-700' : 'text-violet-700'}`}>{type.highlight.label}</div>
+                <div className={`text-xs font-semibold mb-1 ${c.highlightText}`}>{type.highlight.label}</div>
                 <p className="text-xs text-stone-700 dark:text-stone-300 leading-relaxed">{type.highlight.text}</p>
               </div>
 
               <Link
                 href={`/types/${type.id}`}
-                className={`inline-flex px-5 py-2.5 rounded-lg text-sm font-medium text-white transition-colors ${type.id === 'inattentive' ? 'bg-indigo-700 hover:bg-indigo-800' : 'bg-violet-700 hover:bg-violet-800'}`}
+                className={`inline-flex px-5 py-2.5 rounded-lg text-sm font-medium text-white transition-colors ${c.btn}`}
               >
                 Deep dive: {type.name} →
               </Link>
             </div>
-          ))}
+          )})}
         </div>
       </section>
 

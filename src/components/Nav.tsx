@@ -22,7 +22,8 @@ const navItems: NavItem[] = [
     children: [
       { href: '/types', label: 'Overview', description: 'All ADHD presentations' },
       { href: '/types/inattentive', label: 'Inattentive', description: 'The quiet, often-missed type' },
-      { href: '/types/combined', label: 'Hyperactive / Combined', description: 'The visible, often-mislabeled type' },
+      { href: '/types/combined', label: 'Combined', description: 'The most commonly diagnosed type' },
+      { href: '/types/hyperactive', label: 'Hyperactive', description: 'The rarely isolated type' },
     ],
   },
   {
@@ -31,6 +32,7 @@ const navItems: NavItem[] = [
     children: [
       { href: '/symptoms', label: 'All Symptoms', description: '8 symptom clusters explained' },
       { href: '/brain', label: 'Brain & Chemistry', description: 'How ADHD works neurologically' },
+      { href: '/comorbidities', label: 'Comorbidities', description: 'Conditions that travel with ADHD' },
     ],
   },
   {
@@ -39,6 +41,10 @@ const navItems: NavItem[] = [
     children: [
       { href: '/what-helps', label: 'All Interventions', description: 'Medication, therapy, lifestyle' },
     ],
+  },
+  {
+    href: '/diagnosis',
+    label: 'Diagnosis',
   },
   { href: '/sources', label: 'Sources' },
 ]

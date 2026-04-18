@@ -34,6 +34,13 @@ export const combinedStages: AgeStage[] = [
   { name: 'Adulthood', ageRange: '30+', emoji: '🍂' },
 ]
 
+export const hyperactiveStages: AgeStage[] = [
+  { name: 'Early childhood', ageRange: '2–6', emoji: '🌱' },
+  { name: 'School age', ageRange: '7–12', emoji: '🌸' },
+  { name: 'Teens', ageRange: '13–17', emoji: '🌿' },
+  { name: 'Adulthood', ageRange: '18+', emoji: '🍂' },
+]
+
 export const adhdTypes: AdhdType[] = [
   {
     id: 'inattentive',
@@ -61,6 +68,20 @@ export const adhdTypes: AdhdType[] = [
     highlight: {
       label: 'Shifts with age',
       text: "Visible hyperactivity often decreases after adolescence. What remains — impulsivity, emotional dysregulation, executive dysfunction, and chronic underachievement — is just as impairing but much harder to see.",
+    },
+  },
+  {
+    id: 'hyperactive',
+    name: 'Predominantly Hyperactive-Impulsive',
+    shortName: 'Hyperactive (ADHD-PH)',
+    emoji: '🔥',
+    headline: 'The rarely isolated type',
+    description:
+      'Characterized by hyperactive and impulsive behaviors without significant inattention. This is most commonly diagnosed in very young children. As cognitive demands increase with age (e.g., in school), most are re-diagnosed with the Combined presentation because underlying inattention becomes apparent.',
+    stages: hyperactiveStages,
+    highlight: {
+      label: 'Age-dependent',
+      text: 'True hyperactive-impulsive presentation without inattention is exceedingly rare in adults. It is largely considered a developmental precursor to Combined ADHD.',
     },
   },
 ]

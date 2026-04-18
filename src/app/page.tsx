@@ -64,16 +64,39 @@ export default function HomePage() {
       <FadeIn delay={0.1}>
         <section className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-stone-900 dark:text-stone-100 mb-2">The two main presentations</h2>
-            <p className="text-stone-500 dark:text-stone-400">Both share the same neurological foundation — but the surface symptoms differ significantly.</p>
+            <h2 className="text-2xl font-bold text-stone-900 dark:text-stone-100 mb-2">The three presentations</h2>
+            <p className="text-stone-500 dark:text-stone-400">All three share the same neurological foundation — but the surface symptoms differ significantly.</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {adhdTypes.map((type) => (
-              <div key={type.id} className={`border rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-md ${type.id === 'inattentive' ? 'bg-indigo-50 dark:bg-indigo-950/30 border-indigo-200 dark:border-indigo-800/50' : 'bg-violet-50 dark:bg-violet-950/30 border-violet-200 dark:border-violet-800/50'}`}>
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+            {adhdTypes.map((type) => {
+              const colors: Record<string, any> = {
+                inattentive: {
+                  bg: 'bg-indigo-50 dark:bg-indigo-950/30 border-indigo-200 dark:border-indigo-800/50',
+                  text: 'text-indigo-800 dark:text-indigo-300',
+                  highlight: 'text-indigo-800 dark:text-indigo-400',
+                  btn: 'bg-indigo-700 hover:bg-indigo-800 dark:bg-indigo-600 dark:hover:bg-indigo-500'
+                },
+                combined: {
+                  bg: 'bg-violet-50 dark:bg-violet-950/30 border-violet-200 dark:border-violet-800/50',
+                  text: 'text-violet-800 dark:text-violet-300',
+                  highlight: 'text-violet-800 dark:text-violet-400',
+                  btn: 'bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-500'
+                },
+                hyperactive: {
+                  bg: 'bg-rose-50 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800/50',
+                  text: 'text-rose-800 dark:text-rose-300',
+                  highlight: 'text-rose-800 dark:text-rose-400',
+                  btn: 'bg-rose-700 hover:bg-rose-800 dark:bg-rose-600 dark:hover:bg-rose-500'
+                }
+              };
+              const c = colors[type.id] || colors.inattentive;
+              
+              return (
+              <div key={type.id} className={`border rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-md ${c.bg}`}>
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-3xl">{type.emoji}</span>
                   <div>
-                    <h3 className={`text-xl font-bold ${type.id === 'inattentive' ? 'text-indigo-800 dark:text-indigo-300' : 'text-violet-800 dark:text-violet-300'}`}>{type.name}</h3>
+                    <h3 className={`text-xl font-bold ${c.text}`}>{type.name}</h3>
                     <p className="text-sm text-stone-500 dark:text-stone-400">{type.headline}</p>
                   </div>
                 </div>
@@ -92,20 +115,20 @@ export default function HomePage() {
 
                 {/* Highlight callout */}
                 <div className="bg-white/70 dark:bg-stone-900/50 rounded-xl p-3 mb-5 text-xs text-stone-600 dark:text-stone-300 border border-stone-200 dark:border-stone-700">
-                  <span className={`font-semibold ${type.id === 'inattentive' ? 'text-indigo-800 dark:text-indigo-400' : 'text-violet-800 dark:text-violet-400'}`}>{type.highlight.label}: </span>
+                  <span className={`font-semibold ${c.highlight}`}>{type.highlight.label}: </span>
                   {type.highlight.text}
                 </div>
 
                 <div className="flex flex-wrap gap-2">
                   <Link
                     href={`/types/${type.id}`}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors text-white ${type.id === 'inattentive' ? 'bg-indigo-700 hover:bg-indigo-800 dark:bg-indigo-600 dark:hover:bg-indigo-500' : 'bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-500'}`}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors text-white ${c.btn}`}
                   >
                     {type.shortName} →
                   </Link>
                 </div>
               </div>
-            ))}
+            )})}
           </div>
         </section>
       </FadeIn>
@@ -197,9 +220,11 @@ export default function HomePage() {
       <FadeIn delay={0.1}>
         <section className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
           <h2 className="text-2xl font-bold text-stone-900 dark:text-stone-100 mb-8">Where do you want to start?</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               { href: '/symptoms', emoji: '🌊', title: 'Symptom guide', desc: '8 ADHD symptom clusters explained — including the ones no one talks about', color: 'bg-indigo-50 dark:bg-indigo-950/30 border-indigo-200 dark:border-indigo-800/50 hover:bg-indigo-100 dark:hover:bg-indigo-900/40 text-indigo-900 dark:text-indigo-100' },
+              { href: '/comorbidities', emoji: '🔗', title: 'Comorbidities', desc: 'Anxiety, depression, autism, and other conditions that travel with ADHD', color: 'bg-teal-50 dark:bg-teal-950/30 border-teal-200 dark:border-teal-800/50 hover:bg-teal-100 dark:hover:bg-teal-900/40 text-teal-900 dark:text-teal-100' },
+              { href: '/diagnosis', emoji: '📋', title: 'Diagnostic journey', desc: 'What to expect from realization to assessment and titration', color: 'bg-rose-50 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800/50 hover:bg-rose-100 dark:hover:bg-rose-900/40 text-rose-900 dark:text-rose-100' },
               { href: '/what-helps', emoji: '💊', title: 'What helps', desc: 'Medication, therapy, lifestyle, and tools — evidence-rated', color: 'bg-violet-50 dark:bg-violet-950/30 border-violet-200 dark:border-violet-800/50 hover:bg-violet-100 dark:hover:bg-violet-900/40 text-violet-900 dark:text-violet-100' },
               { href: '/age-groups', emoji: '📅', title: 'By age group', desc: 'How ADHD presents and is managed from early childhood to later life', color: 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/50 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 text-emerald-900 dark:text-emerald-100' },
               { href: '/brain', emoji: '🧠', title: 'The ADHD brain', desc: 'Dopamine, norepinephrine, prefrontal cortex — what is actually different', color: 'bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800/50 hover:bg-amber-100 dark:hover:bg-amber-900/40 text-amber-900 dark:text-amber-100' },
