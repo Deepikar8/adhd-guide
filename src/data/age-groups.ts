@@ -26,7 +26,7 @@ export const ageGroups: AgeGroup[] = [
       'High activity level that exhausts caregivers',
       'Sleep difficulties common from early on',
     ],
-    color: 'bg-green-50 border-green-200',
+    color: 'bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800/40',
     href: '/age-groups',
   },
   {
@@ -44,7 +44,7 @@ export const ageGroups: AgeGroup[] = [
       'Social friction from impulsive comments or not waiting turns',
       'Avoidance of tasks requiring sustained mental effort',
     ],
-    color: 'bg-pink-50 border-pink-200',
+    color: 'bg-pink-50 dark:bg-pink-950/20 border-pink-200 dark:border-pink-800/40',
     href: '/age-groups',
   },
   {
@@ -63,7 +63,7 @@ export const ageGroups: AgeGroup[] = [
       'Sleep phase delay makes mornings nearly impossible',
       'Frequent late or missing work despite effort',
     ],
-    color: 'bg-emerald-50 border-emerald-200',
+    color: 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-200 dark:border-emerald-800/40',
     href: '/age-groups',
   },
   {
@@ -82,7 +82,7 @@ export const ageGroups: AgeGroup[] = [
       'Relationship difficulties due to emotional dysregulation',
       'High comorbidity with anxiety and depression at this stage',
     ],
-    color: 'bg-violet-50 border-violet-200',
+    color: 'bg-violet-50 dark:bg-violet-950/20 border-violet-200 dark:border-violet-800/40',
     href: '/age-groups',
   },
   {
@@ -101,7 +101,7 @@ export const ageGroups: AgeGroup[] = [
       'High rates of burnout and exhaustion from compensating',
       'Hormonal shifts (women) worsening ADHD symptoms',
     ],
-    color: 'bg-amber-50 border-amber-200',
+    color: 'bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800/40',
     href: '/age-groups',
   },
   {
@@ -119,7 +119,7 @@ export const ageGroups: AgeGroup[] = [
       'Long-undiagnosed adults carry significant accumulated shame',
       'New relationship with time and purpose needed',
     ],
-    color: 'bg-stone-50 border-stone-300',
+    color: 'bg-stone-50 dark:bg-stone-900/50 border-stone-300 dark:border-stone-700',
     href: '/age-groups',
   },
 ]
