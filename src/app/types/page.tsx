@@ -63,7 +63,7 @@ export default function TypesPage() {
         </div>
       </section>
 
-      <section className="bg-stone-100 border-y border-stone-200 dark:border-stone-700">
+      <section className="bg-stone-100 dark:bg-stone-900/50 border-y border-stone-200 dark:border-stone-700">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
           <h2 className="text-lg font-bold text-stone-900 dark:text-stone-100 mb-4">What about &ldquo;ADHD-NOS&rdquo; or the third type?</h2>
           <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed max-w-3xl">
