@@ -2,9 +2,9 @@ import { interventions, type EvidenceTier } from '@/data/interventions'
 import Link from 'next/link'
 
 const evidenceLabels: Record<EvidenceTier, { label: string; color: string }> = {
-  strong:   { label: 'Strong evidence', color: 'bg-emerald-100 text-emerald-800' },
-  moderate: { label: 'Moderate evidence', color: 'bg-amber-100 text-amber-800' },
-  limited:  { label: 'Limited evidence', color: 'bg-stone-200 text-stone-700 dark:text-stone-300' },
+  strong:   { label: 'Strong evidence', color: 'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300' },
+  moderate: { label: 'Moderate evidence', color: 'bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300' },
+  limited:  { label: 'Limited evidence', color: 'bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-300' },
 }
 
 const categoryLabels: Record<string, { label: string; emoji: string }> = {
@@ -15,14 +15,14 @@ const categoryLabels: Record<string, { label: string; emoji: string }> = {
 }
 
 const colorMap: Record<string, { bg: string; border: string; text: string }> = {
-  indigo:  { bg: 'bg-indigo-50 dark:bg-indigo-950/20',  border: 'border-indigo-200 dark:border-indigo-800/40',  text: 'text-indigo-800 dark:text-indigo-300' },
-  blue:    { bg: 'bg-blue-50',    border: 'border-blue-200',    text: 'text-blue-800' },
-  violet:  { bg: 'bg-violet-50 dark:bg-violet-950/20',  border: 'border-violet-200 dark:border-violet-800/40',  text: 'text-violet-800 dark:text-violet-300' },
-  emerald: { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-800' },
-  green:   { bg: 'bg-green-50',   border: 'border-green-200',   text: 'text-green-800' },
-  slate:   { bg: 'bg-slate-50',   border: 'border-slate-200',   text: 'text-slate-800' },
-  amber:   { bg: 'bg-amber-50',   border: 'border-amber-200',   text: 'text-amber-800' },
-  lime:    { bg: 'bg-lime-50',    border: 'border-lime-200',    text: 'text-lime-800' },
+  indigo:  { bg: 'bg-indigo-50 dark:bg-indigo-950/20',   border: 'border-indigo-200 dark:border-indigo-800/40',   text: 'text-indigo-800 dark:text-indigo-300' },
+  blue:    { bg: 'bg-blue-50 dark:bg-blue-950/20',       border: 'border-blue-200 dark:border-blue-800/40',       text: 'text-blue-800 dark:text-blue-300' },
+  violet:  { bg: 'bg-violet-50 dark:bg-violet-950/20',   border: 'border-violet-200 dark:border-violet-800/40',   text: 'text-violet-800 dark:text-violet-300' },
+  emerald: { bg: 'bg-emerald-50 dark:bg-emerald-950/20', border: 'border-emerald-200 dark:border-emerald-800/40', text: 'text-emerald-800 dark:text-emerald-300' },
+  green:   { bg: 'bg-green-50 dark:bg-green-950/20',     border: 'border-green-200 dark:border-green-800/40',     text: 'text-green-800 dark:text-green-300' },
+  slate:   { bg: 'bg-slate-50 dark:bg-slate-800/40',     border: 'border-slate-200 dark:border-slate-700',        text: 'text-slate-800 dark:text-slate-200' },
+  amber:   { bg: 'bg-amber-50 dark:bg-amber-950/20',     border: 'border-amber-200 dark:border-amber-800/40',     text: 'text-amber-800 dark:text-amber-300' },
+  lime:    { bg: 'bg-lime-50 dark:bg-lime-950/20',       border: 'border-lime-200 dark:border-lime-800/40',       text: 'text-lime-800 dark:text-lime-300' },
 }
 
 const categories = ['medication', 'therapy', 'lifestyle', 'tools'] as const
