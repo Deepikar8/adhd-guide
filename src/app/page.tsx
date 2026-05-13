@@ -43,7 +43,7 @@ export default function HomePage() {
                 <span className="text-indigo-700 dark:text-indigo-400">in the ADHD brain?</span>
               </h1>
               <p className="text-lg sm:text-xl text-stone-700 dark:text-stone-300 leading-relaxed mb-8 max-w-2xl">
-                ADHD is not a attention problem — it is a regulation problem. Dopamine, norepinephrine,
+                ADHD is not an attention problem — it is a regulation problem. Dopamine, norepinephrine,
                 executive function, working memory, time perception, emotional regulation. This guide
                 explains what is actually happening, at every age, in plain language.
               </p>
